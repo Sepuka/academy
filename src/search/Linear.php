@@ -20,6 +20,10 @@ class Linear
 
     public function improvedLinearSymbolSearch(string $data, string $symbol): int
     {
+        if (!$symbol) {
+            return -1;
+        }
+
         $len = mb_strlen($data);
         $data .= $symbol;
         $pos = 0;

@@ -47,6 +47,7 @@ class LinearTest extends TestCase
             ['qwerty', 'w', 1],
             ['qwerty', 'y', 5],
             ['qwerty', 'a', -1],
+            ['qwerty', '', -1],
         ];
     }
 }
