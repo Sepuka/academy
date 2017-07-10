@@ -17,9 +17,10 @@ class LinearTest extends TestCase
 
     /**
      * @dataProvider simpleLinearDataProvider
+     *
      * @param string $data
      * @param string $symbol
-     * @param int $expectedPos
+     * @param int    $expectedPos
      */
     public function testSimpleLinear(string $data, string $symbol, int $expectedPos)
     {
@@ -28,9 +29,10 @@ class LinearTest extends TestCase
 
     /**
      * @dataProvider simpleLinearDataProvider
+     *
      * @param string $data
      * @param string $symbol
-     * @param int $expectedPos
+     * @param int    $expectedPos
      */
     public function testImprovedLinear(string $data, string $symbol, int $expectedPos)
     {
