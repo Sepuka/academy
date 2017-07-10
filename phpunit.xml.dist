@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phpunit bootstrap="vendor/autoload.php" colors="true">
+    <testsuits>
+        <testsuit name="search">
+            <directory>test/search</directory>
+        </testsuit>
+    </testsuits>
 </phpunit>

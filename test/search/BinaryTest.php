@@ -17,6 +17,7 @@ class BinaryTest extends TestCase
 
     /**
      * @dataProvider simpleSearchDataProvider
+     * @small
      *
      * @param string $data
      * @param int    $value
@@ -29,6 +30,7 @@ class BinaryTest extends TestCase
 
     /**
      * @dataProvider simpleSearchDataProvider
+     * @small
      *
      * @param string $data
      * @param int    $value

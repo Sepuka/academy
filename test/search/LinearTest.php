@@ -17,6 +17,7 @@ class LinearTest extends TestCase
 
     /**
      * @dataProvider simpleLinearDataProvider
+     * @small
      *
      * @param string $data
      * @param string $symbol
@@ -29,6 +30,7 @@ class LinearTest extends TestCase
 
     /**
      * @dataProvider simpleLinearDataProvider
+     * @small
      *
      * @param string $data
      * @param string $symbol
