@@ -5,6 +5,8 @@ namespace sepuka\academy\search;
 class Binary
 {
     /**
+     * Самая простая реализация поиска делением пополам
+     *
      * @param string $data
      * @param int    $value
      *
@@ -30,6 +32,7 @@ class Binary
     }
 
     /**
+     * Улучшеная версия не проверяет текущую позицию, а проверяет момент пересечения срезов
      * @param string $data
      * @param int    $value
      *
