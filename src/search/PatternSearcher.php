@@ -4,8 +4,15 @@ declare(strict_types=1);
 
 namespace sepuka\academy\search;
 
-class Pattern
+class PatternSearcher
 {
+    /**
+     * Простой поиск ищет вхождение шаблона с каждой позиции строки
+     * @param string $pattern
+     * @param string $string
+     *
+     * @return int
+     */
     public function simplePatternSearch(string $pattern, string $string): int
     {
         $textPosition = 0;

@@ -3,16 +3,16 @@
 namespace sepuka\academy\test\search;
 
 use PHPUnit\Framework\TestCase;
-use sepuka\academy\search\Pattern;
+use sepuka\academy\search\PatternSearcher;
 
 class PatternTest extends TestCase
 {
-    /** @var Pattern */
+    /** @var PatternSearcher */
     private $patternInstance;
 
     public function setUp()
     {
-        $this->patternInstance = new Pattern();
+        $this->patternInstance = new PatternSearcher();
     }
 
     /**

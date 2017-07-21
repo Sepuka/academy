@@ -3,16 +3,16 @@
 namespace sepuka\academy\test\search;
 
 use PHPUnit\Framework\TestCase;
-use sepuka\academy\search\Binary;
+use sepuka\academy\search\BinarySearcher;
 
 class BinaryTest extends TestCase
 {
-    /** @var Binary */
+    /** @var BinarySearcher */
     private $instance;
 
     public function setUp()
     {
-        $this->instance = new Binary();
+        $this->instance = new BinarySearcher();
     }
 
     /**

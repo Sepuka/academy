@@ -2,7 +2,7 @@
 
 namespace sepuka\academy\search;
 
-class Binary
+class BinarySearcher
 {
     /**
      * Самая простая реализация поиска делением пополам

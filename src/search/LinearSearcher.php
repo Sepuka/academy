@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace sepuka\academy\search;
 
-class Linear
+class LinearSearcher
 {
     /**
      * При простом прохождении инвариант цикла содержит две проверки: выход за границу и символ

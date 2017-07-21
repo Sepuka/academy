@@ -3,16 +3,16 @@
 namespace sepuka\academy\test\search;
 
 use PHPUnit\Framework\TestCase;
-use sepuka\academy\search\Linear;
+use sepuka\academy\search\LinearSearcher;
 
 class LinearTest extends TestCase
 {
-    /** @var Linear */
+    /** @var LinearSearcher */
     private $linearInstance;
 
     public function setUp()
     {
-        $this->linearInstance = new Linear();
+        $this->linearInstance = new LinearSearcher();
     }
 
     /**
