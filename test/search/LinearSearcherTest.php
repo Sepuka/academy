@@ -5,7 +5,7 @@ namespace sepuka\academy\test\search;
 use PHPUnit\Framework\TestCase;
 use sepuka\academy\search\LinearSearcher;
 
-class LinearTest extends TestCase
+class LinearSearcherTest extends TestCase
 {
     /** @var LinearSearcher */
     private $linearInstance;

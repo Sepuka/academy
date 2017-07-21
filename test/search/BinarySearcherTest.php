@@ -5,7 +5,7 @@ namespace sepuka\academy\test\search;
 use PHPUnit\Framework\TestCase;
 use sepuka\academy\search\BinarySearcher;
 
-class BinaryTest extends TestCase
+class BinarySearcherTest extends TestCase
 {
     /** @var BinarySearcher */
     private $instance;

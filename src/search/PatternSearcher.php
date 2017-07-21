@@ -46,4 +46,32 @@ class PatternSearcher
 
         return !($patternPosition < $patternLength);
     }
+
+    /**
+     * Реализация поиска по Кнуту-Моррису-Пратту
+     * TODO: подумать над "D" - сбросом $patternPos. Возможно это не всегда -1
+     *
+     * @param string $pattern
+     * @param string $string
+     *
+     * @return int
+     */
+    public function KMPPatternSearch(string $pattern, string $string): int
+    {
+        $patternPos = 0;
+        $stringPos = 0;
+        $patternLen = strlen($pattern);
+        $stringLen = strlen($string);
+
+        while (($patternPos < $patternLen) && ($stringPos < $stringLen)) {
+            if (($patternPos < 0) || $string[$stringPos] == $pattern[$patternPos]) {
+                ++$stringPos;
+                ++$patternPos;
+            } elseif (($patternPos >= 0) && ($string[$stringPos] != $pattern[$patternPos])) {
+                $patternPos = -1;
+            }
+        }
+
+        return $patternPos > 0 ? $stringPos - $patternLen : -1;
+    }
 }
