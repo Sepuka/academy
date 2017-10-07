@@ -39,6 +39,18 @@ class PatternSearcherTest extends TestCase
         $this->assertEquals($expectedPosition, $this->patternInstance->KMPPatternSearch($pattern, $string));
     }
 
+    /**
+     * @dataProvider patternSearchDataProvider
+     *
+     * @param int    $expectedPosition
+     * @param string $pattern
+     * @param string $string
+     */
+    public function testBMPatternSearch(int $expectedPosition, string $pattern, string $string)
+    {
+        $this->assertEquals($expectedPosition, $this->patternInstance->BMPatternSearch($pattern, $string));
+    }
+
     public function patternSearchDataProvider(): array
     {
         return [

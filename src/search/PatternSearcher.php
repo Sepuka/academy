@@ -74,4 +74,35 @@ class PatternSearcher
 
         return $patternPos > 0 ? $stringPos - $patternLen : -1;
     }
+
+    /**
+     * Алгоритм Бойера Мура
+     */
+    public function BMPatternSearch(string $pattern, string $string): int
+    {
+        $patternPos = strlen($pattern);
+        $patternLen = strlen($pattern);
+        $stringPosRel = strlen($pattern);
+        $stringPosAbs = strlen($pattern);
+        $stringLen = strlen($string);
+
+        $stopWordPos = function(string $pattern, string $symbol) {
+            $stopWordPos = strrpos($pattern, $symbol);
+
+            return $stopWordPos ? ++$stopWordPos : 0;
+        };
+
+        while (($patternPos > 0) && ($stringPosRel <= $stringLen)) {
+            if ($pattern[$patternPos-1] === $string[$stringPosAbs-1]) {
+                --$stringPosAbs;
+                --$patternPos;
+            } else {
+                $stringPosAbs += $patternLen - $stopWordPos($pattern, $string[$stringPosAbs-1]);
+                $patternPos = $patternLen;
+                $stringPosRel = $stringPosAbs;
+            }
+        }
+
+        return !$patternPos ? $stringPosAbs : -1;
+    }
 }
