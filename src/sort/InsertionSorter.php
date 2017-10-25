@@ -13,7 +13,6 @@ class InsertionSorter
 {
     /**
      * @param array $items
-     * @TODO: тесты
      *
      * @return array
      */
