@@ -26,6 +26,17 @@ class InsertionSorterTest extends TestCase
         $this->assertEquals($expectedResult, $this->instance->straightInsertionSorter($data));
     }
 
+    /**
+     * @dataProvider straightInsertSorterDataProvider
+     *
+     * @param array $data
+     * @param array $expectedResult
+     */
+    public function testBinaryInsertionSorter(array $data, array $expectedResult)
+    {
+        $this->assertEquals($expectedResult, $this->instance->binaryInsertionSorter($data));
+    }
+
     public function straightInsertSorterDataProvider(): array
     {
         return [
