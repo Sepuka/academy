@@ -4,9 +4,12 @@ namespace sepuka\academy\test\sort;
 
 use PHPUnit\Framework\TestCase;
 use sepuka\academy\sort\InsertionSorter;
+use sepuka\academy\test\resources\helper\SorterDataProviderTrait;
 
 class InsertionSorterTest extends TestCase
 {
+    use SorterDataProviderTrait;
+
     /** @var InsertionSorter */
     private $instance;
 
@@ -16,7 +19,7 @@ class InsertionSorterTest extends TestCase
     }
 
     /**
-     * @dataProvider straightInsertSorterDataProvider
+     * @dataProvider sorterDataProvider
      *
      * @param array $data
      * @param array $expectedResult
@@ -27,7 +30,7 @@ class InsertionSorterTest extends TestCase
     }
 
     /**
-     * @dataProvider straightInsertSorterDataProvider
+     * @dataProvider sorterDataProvider
      *
      * @param array $data
      * @param array $expectedResult
@@ -35,14 +38,5 @@ class InsertionSorterTest extends TestCase
     public function testBinaryInsertionSorter(array $data, array $expectedResult)
     {
         $this->assertEquals($expectedResult, $this->instance->binaryInsertionSorter($data));
-    }
-
-    public function straightInsertSorterDataProvider(): array
-    {
-        return [
-            [[1,2,3,4,5,6,7,8,9], [1,2,3,4,5,6,7,8,9]],
-            [[9,8,7,6,5,4,3,2,1], [1,2,3,4,5,6,7,8,9]],
-            [[9,7,5,3,1], [1,3,5,7,9]],
-        ];
     }
 }

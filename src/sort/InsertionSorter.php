@@ -12,6 +12,7 @@ namespace sepuka\academy\sort;
 class InsertionSorter
 {
     /**
+     * Сложность порядка O(n^2)
      * @param array $items
      *
      * @return array

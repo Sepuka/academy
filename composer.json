@@ -14,7 +14,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "sepuka\\academy\\": "src/"
+            "sepuka\\academy\\": "src/",
+            "sepuka\\academy\\test\\": "test/"
         }
     }
 }
