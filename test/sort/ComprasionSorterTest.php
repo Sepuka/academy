@@ -28,4 +28,15 @@ class ComprasionSorterTest extends TestCase
     {
         $this->assertEquals($expectedResult, $this->instance->bubbleSort($data));
     }
+
+    /**
+     * @dataProvider sorterDataProvider
+     *
+     * @param array $data
+     * @param array $expectedResult
+     */
+    public function testBubbleSortWithActionDetect(array $data, array $expectedResult)
+    {
+        $this->assertEquals($expectedResult, $this->instance->bubbleSortWithActionDetect($data));
+    }
 }
