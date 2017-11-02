@@ -19,7 +19,9 @@ class InsertionSorter
      */
     public function straightInsertionSorter(array $items): array
     {
-        for($i = 0; $i < count($items); ++$i) {
+        $n = count($items);
+
+        for($i = 0; $i < $n; ++$i) {
             $current = $items[$i];
             $j = $i;
             while ($j > 0 && $current < $items[$j - 1]) {
@@ -42,12 +44,14 @@ class InsertionSorter
      */
     public function binaryInsertionSorter(array $items): array
     {
-        for($i = 1; $i < count($items); ++$i) {
+        $n = count($items);
+
+        for($i = 1; $i < $n; ++$i) {
             $current = $items[$i];
             $leftPosition = 0;
             $rightPosition = $i;
             while ($leftPosition < $rightPosition) {
-                $middle = (int)floor(($leftPosition + $rightPosition)/2);
+                $middle = (int) (($leftPosition + $rightPosition) / 2);
                 if ($items[$middle] <= $current) {
                     $leftPosition = $middle + 1;
                 } else {

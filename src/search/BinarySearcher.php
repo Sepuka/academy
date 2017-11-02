@@ -44,7 +44,7 @@ class BinarySearcher
         $r = strlen($data);
 
         while ($l < $r) {
-            $middle = (int)floor(($l + $r) / 2);
+            $middle = (int) (($l + $r) / 2);
             if ($data[$middle] < $value) {
                 $l = $middle + 1;
             } else {
